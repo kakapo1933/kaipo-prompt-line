@@ -1,0 +1,42 @@
+# Catppuccin-Macchiato Colors
+TEXT='%F{#CAD3F5}'       # Text
+PEACH='%F{#F5A97F}'      # Peach
+RED='%F{#ED8796}'        # Red
+YELLOW='%F{#EED49F}'     # Yellow
+GREEN='%F{#A6DA95}'      # Green
+SKY='%F{#7DC4E4}'        # Sky
+BLUE='%F{#8AADF4}'       # Blue
+TEAL='%F{#8BD5CA}'       # Teal
+SAPPHIRE='%F{#209FB5}'   # Sapphire
+SURFACE0='%F{#363A4F}'   # Surface0
+MAUVE='%F{#C6A0F6}'      # Mauve
+PINK='%F{#F5BDE6}'       # Pink
+SURFACE1='%F{#494D64}'   # Surface1
+SURFACE2='%F{#5B6078}'   # Surface2
+OVERLAY0='%F{#6E738D}'   # Overlay0
+LAVENDER='%F{#B7BDF8}'   # Lavender
+CRUST='%F{#181926}'      # Crust
+MANTLE='%F{#1E2030}'     # Mantle
+BASE='%F{#24273A}'       # Base
+RESET='%f'
+
+# Catppuccin-Macchiato Background colors
+BG_PEACH='%K{#F5A97F}'       # Peach
+BG_RED='%K{#ED8796}'         # Red
+BG_YELLOW='%K{#EED49F}'      # Yellow
+BG_GREEN='%K{#A6DA95}'       # Green
+BG_SKY='%K{#7DC4E4}'         # Sky
+BG_BLUE='%K{#8AADF4}'        # Blue
+BG_TEAL='%K{#8BD5CA}'        # Teal
+BG_SAPPHIRE='%K{#209FB5}'    # Sapphire
+BG_SURFACE0='%K{#363A4F}'    # Surface0
+BG_PINK='%K{#F5BDE6}'        # Pink
+BG_SURFACE1='%K{#494D64}'    # Surface1
+BG_SURFACE2='%K{#5B6078}'    # Surface2
+BG_OVERLAY0='%K{#6E738D}'    # Overlay0
+BG_MAUVE='%K{#C6A0F6}'       # Mauve
+BG_LAVENDER='%K{#B7BDF8}'    # Lavender
+BG_CRUST='%K{#181926}'       # Crust
+BG_MANTLE='%K{#1E2030}'      # Mantle
+BG_BASE='%K{#24273A}'        # Base
+BG_RESET='%k'
