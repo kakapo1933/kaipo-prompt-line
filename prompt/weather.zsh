@@ -19,58 +19,58 @@ get_weather_icon() {
               echo "󰖨 "
               ;;
           *"partly cloudy"*|*"few clouds"*)
-             echo " "
+             echo " "
               ;;
           *"cloud"*|*"overcast"*)
-              echo "  "
+              echo "  "
               ;;
           *"rain"*|*"drizzle"*|*"shower"*)
-              echo " "
+              echo " "
               ;;
           *"snow"*|*"blizzard"*)
-              echo " "
+              echo " "
               ;;
           *"thunder"*|*"storm"*)
-              echo " "
+              echo " "
               ;;
           *"fog"*|*"mist"*|*"haze"*)
               echo "󰖑 "
               ;;
           *"wind"*)
-              echo " "
+              echo " "
               ;;
           *)
-              echo " "  # Default thermometer
+              echo " "  # Default thermometer
               ;;
       esac
     else
       case "$condition" in
           *"clear"*|*"sunny"*)
-              echo " "
+              echo " "
               ;;
           *"partly cloudy"*|*"few clouds"*)
-              echo " "
+              echo " "
               ;;
           *"cloud"*|*"overcast"*)
-              echo "  "
+              echo "  "
               ;;
           *"rain"*|*"drizzle"*|*"shower"*)
-              echo " "
+              echo " "
               ;;
           *"snow"*|*"blizzard"*)
-              echo " "
+              echo " "
               ;;
           *"thunder"*|*"storm"*)
-              echo " "
+              echo " "
               ;;
           *"fog"*|*"mist"*|*"haze"*)
               echo "󰖑 "
               ;;
           *"wind"*)
-              echo " "
+              echo " "
               ;;
           *)
-              echo " "  # Default thermometer
+              echo " "  # Default thermometer
               ;;
       esac
     fi
@@ -92,7 +92,7 @@ temperature() {
 
 weather() {
   local cache_file="/tmp/weather_cache"
-    local cache_time=600  # 10 minutes in seconds
+    local cache_time=0  # 10 minutes in seconds
     
     # Check if cache exists and is recent
     if [[ ! -f "$cache_file" ]] || [[ $(($(date +%s) - $(stat -f %m "$cache_file" 2>/dev/null || echo 0))) -gt $cache_time ]]; then
