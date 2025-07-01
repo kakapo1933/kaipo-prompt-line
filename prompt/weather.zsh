@@ -92,7 +92,7 @@ temperature() {
 
 weather() {
   local cache_file="/tmp/weather_cache"
-    local cache_time=0  # 10 minutes in seconds
+    local cache_time=600  # 10 minutes in seconds
     
     # Check if cache exists and is recent
     if [[ ! -f "$cache_file" ]] || [[ $(($(date +%s) - $(stat -f %m "$cache_file" 2>/dev/null || echo 0))) -gt $cache_time ]]; then
