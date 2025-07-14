@@ -1,4 +1,4 @@
-# Weather
+# Weather segment
 is_daytime() {
     local hour=$(date +%H)
     # Assuming daytime is 6 AM to 8 PM (06-20)
@@ -77,30 +77,34 @@ get_weather_icon() {
 }
 
 temperature() {
-  local cache_file="/tmp/temperature_cache"
+    local cache_file="/tmp/temperature_cache"
     local cache_time=600  # 10 minutes in seconds
     
     # Check if cache exists and is recent
     if [[ ! -f "$cache_file" ]] || [[ $(($(date +%s) - $(stat -f %m "$cache_file" 2>/dev/null || echo 0))) -gt $cache_time ]]; then
-      # Cache is old/missing, refresh it
-      shortcuts run Terminal\ temperature 2> /dev/null | tr -d '\n' > "$cache_file"
+        # Cache is old/missing, refresh it
+        shortcuts run Terminal\ temperature 2> /dev/null | tr -d '\n' > "$cache_file"
     fi
     
     # Return cached content
-  cat "$cache_file" 2>/dev/null
+    cat "$cache_file" 2>/dev/null
 }
 
 weather() {
-  local cache_file="/tmp/weather_cache"
+    local cache_file="/tmp/weather_cache"
     local cache_time=600  # 10 minutes in seconds
     
     # Check if cache exists and is recent
     if [[ ! -f "$cache_file" ]] || [[ $(($(date +%s) - $(stat -f %m "$cache_file" 2>/dev/null || echo 0))) -gt $cache_time ]]; then
-      # Cache is old/missing, refresh it
-      local condition=$(shortcuts run Terminal\ weather 2> /dev/null | tr -d '\n')
-      get_weather_icon "$condition" > "$cache_file"
+        # Cache is old/missing, refresh it
+        local condition=$(shortcuts run Terminal\ weather 2> /dev/null | tr -d '\n')
+        get_weather_icon "$condition" > "$cache_file"
     fi
     
     # Return cached content
-  cat "$cache_file" 2>/dev/null
+    cat "$cache_file" 2>/dev/null
+}
+
+render_weather_segment() {
+    echo -n "${YELLOW}${PL_LEFT_ROUND}${BG_YELLOW}${CRUST}$(weather)${BG_BASE}${YELLOW} $(temperature) ${BG_RESET}${CRUST}${PL_RIGHT_ROUND}${RESET}${BLANK}"
 }
