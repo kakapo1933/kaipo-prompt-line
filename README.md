@@ -2,7 +2,7 @@
 
 A beautiful, feature-rich zsh prompt with Catppuccin Macchiato theme, Powerline-style segments, and dynamic weather integration. Built with a **modular component architecture** for easy customization and maintenance!
 
-![Zsh Prompt Screenshot](./terminal-ui/prompt_line.png)
+![Zsh Prompt Screenshot](./prompt/prompt_line.png)
 
 ## ✨ Features
 
